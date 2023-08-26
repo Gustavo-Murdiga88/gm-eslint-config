@@ -1,6 +1,5 @@
 {
   "extends": [
-    "plugin:tailwindcss/recommended",
     "plugin:@typescript-eslint/recommended",
     "eslint:recommended",
     "eslint-config-prettier"
