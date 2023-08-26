@@ -1,6 +1,6 @@
 {
   "name": "@gm/eslint-config",
-  "private": "false",
+  "private": false,
   "version": "1.0.0",
   "description": "an project with my config of the eslint in projects nextJs, vite and more",
   "main": "index.js",
