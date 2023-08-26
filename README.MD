@@ -7,9 +7,8 @@ This package was built for help when you need config eslint on your project. Thi
 # Install
 
 ```js
-npm install @gm/eslint-config -D
+  npm i @gm-dev/eslint-config -D
 ```
-
 # Usage example
 
 ```json
@@ -17,7 +16,6 @@ npm install @gm/eslint-config -D
 ```
 
 # Indicate
-
 <p>
 I indicate a config  for more patterns in the config eslint.
 
@@ -53,5 +51,3 @@ eslint-plugin-import-helpers
    "plugis": ["eslint-plugin-import-helpers"]
 
 ```
-
-<br/>
