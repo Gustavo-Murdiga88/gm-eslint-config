@@ -1,13 +1,14 @@
 {
   "name": "@gm/eslint-config",
+  "private": "false",
   "version": "1.0.0",
   "description": "an project with my config of the eslint in projects nextJs, vite and more",
   "main": "index.js",
-
   "repository": {
-    "url": "Gustavo-Murdiga88/gm-eslint-config"
+    "url": "https://github.com/Gustavo-Murdiga88/gm-eslint-config",
+    "type": "git",
+    "directory": "/Gustavo-Murdiga88/gm-eslint-config"
   },
-
   "peerDependencies": {
     "eslint": "^8.0.0",
     "typescript": ">=4"
@@ -17,7 +18,10 @@
       "optional": true
     }
   },
-  "keywords": ["eslint", "vite"],
+  "keywords": [
+    "eslint",
+    "vite"
+  ],
   "author": "Gustavo Murdiga",
   "license": "MIT"
 }

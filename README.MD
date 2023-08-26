@@ -50,7 +50,7 @@ eslint-plugin-import-helpers
 ```
 
 ```json
-   plugis: ["eslint-plugin-import-helpers"]
+   "plugis": ["eslint-plugin-import-helpers"]
 
 ```
 
