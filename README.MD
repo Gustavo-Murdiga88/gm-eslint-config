@@ -1,4 +1,4 @@
-# @gm-dev/eslint-config/next
+# @gm-dev/eslint-config
 
 <p>
 This package was built for help when you need config eslint on your project. This packege has config several, you can applicate this in projects as nextJS, vite and projects back-end with nodeJs. 
