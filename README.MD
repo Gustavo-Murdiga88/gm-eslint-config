@@ -12,7 +12,7 @@ This package was built for help when you need config eslint on your project. Thi
 # Usage example
 
 ```json
-"extends": ["@gm/eslint-config/next"],
+"extends": ["@gm-dev/eslint-config/next"],
 ```
 
 # Indicate
@@ -48,6 +48,6 @@ eslint-plugin-import-helpers
 ```
 
 ```json
-   "plugis": ["eslint-plugin-import-helpers"]
+   "plugins": ["eslint-plugin-import-helpers"]
 
 ```
