@@ -28,6 +28,8 @@ module.exports = {
 	},
 
 	rules: {
+		camelcase: "off",
+		"react/jsx-filename-extension": "off",
 		"react/jsx-runtime": "off",
 		"react/react-in-jsx-scope": "off",
     "import/prefer-default-export": 'off',

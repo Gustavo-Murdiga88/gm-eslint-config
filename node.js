@@ -16,16 +16,13 @@ module.exports = {
 
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-
     extraFileExtensions: [".ts", ".tsx", ".d.ts"],
     ecmaVersion: "latest",
     sourceType: "module",
   },
 
   rules: {
+    "camelcase":"off",
     "no-async-promise-executor": "off",
     "no-debugger": "warn",
     "prettier/prettier": [
