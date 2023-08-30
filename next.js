@@ -27,6 +27,8 @@ module.exports = {
 
 	rules: {
 		camelcase: "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/require-default-props": "off",
 		"react/jsx-filename-extension": "off",
 		"react/jsx-runtime": "off",
 		"react/react-in-jsx-scope": "off",

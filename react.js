@@ -28,6 +28,8 @@ module.exports = {
 	},
 
 	rules: {
+		"react/jsx-props-no-spreading": "off",
+		"react/require-default-props": "off",
 		camelcase: "off",
 		"react/jsx-filename-extension": "off",
 		"react/jsx-runtime": "off",
