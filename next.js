@@ -26,6 +26,7 @@ module.exports = {
 	},
 
 	rules: {
+		"import/extensions": "off",
 		camelcase: "off",
 		"react/jsx-props-no-spreading": "off",
 		"react/require-default-props": "off",
@@ -63,12 +64,6 @@ module.exports = {
 			{
 				selector: 'typeLike',
 				format: ['PascalCase'],
-			},
-		],
-		"import/extensions": [
-			"error",
-			{
-				routes: 'ignorePackages',
 			},
 		],
 

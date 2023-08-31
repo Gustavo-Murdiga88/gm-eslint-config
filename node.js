@@ -22,7 +22,7 @@ module.exports = {
   },
 
   rules: {
-    "import/extensions":"off",
+    "import/extensions": "off",
     "import/no-unresolved":"off",
     "import/prefer-default-export": "off",
     "no-useless-constructor": "off",
@@ -58,12 +58,6 @@ module.exports = {
       {
         selector: "typeLike",
         format: ["PascalCase"],
-      },
-    ],
-    "import/extensions": [
-      "error",
-      {
-        routes: "ignorePackages",
       },
     ],
 
