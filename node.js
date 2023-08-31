@@ -22,6 +22,11 @@ module.exports = {
   },
 
   rules: {
+    "import/extensions":"off",
+    "import/no-unresolved":"off",
+    "import/prefer-default-export": "off",
+    "no-useless-constructor": "off",
+    "no-empty-function": "off",
     "camelcase":"off",
     "no-async-promise-executor": "off",
     "no-debugger": "warn",
