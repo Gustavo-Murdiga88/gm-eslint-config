@@ -22,6 +22,7 @@ module.exports = {
   },
 
   rules: {
+    "class-methods-use-this":"off",
     "import/extensions": "off",
     "import/no-unresolved":"off",
     "import/prefer-default-export": "off",
