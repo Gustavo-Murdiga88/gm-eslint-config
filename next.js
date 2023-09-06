@@ -27,8 +27,9 @@ module.exports = {
 	},
 
 	rules: {
-		"import/extensions": "off",
 		"no-restricted-exports": "off",
+    "import/no-unresolved": "off",
+		"import/extensions": "off",
 		camelcase: "off",
 		"react/jsx-props-no-spreading": "off",
 		"react/require-default-props": "off",
