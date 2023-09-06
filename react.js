@@ -28,6 +28,7 @@ module.exports = {
 	},
 
 	rules: {
+		"no-restricted-exports": "off",
 		"import/extensions": "off",
 		"react/jsx-props-no-spreading": "off",
 		"react/require-default-props": "off",

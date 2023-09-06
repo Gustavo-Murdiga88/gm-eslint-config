@@ -8,6 +8,7 @@ module.exports = {
 		"plugin:react/jsx-runtime",
 		"airbnb",
 		"prettier",
+		"next/core-web-vitals",
 	],
 	env: {
 		es2021: true,
@@ -27,6 +28,7 @@ module.exports = {
 
 	rules: {
 		"import/extensions": "off",
+		"no-restricted-exports": "off",
 		camelcase: "off",
 		"react/jsx-props-no-spreading": "off",
 		"react/require-default-props": "off",
