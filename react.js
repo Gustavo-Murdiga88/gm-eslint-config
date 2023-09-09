@@ -80,11 +80,11 @@ module.exports = {
 		"@typescript-eslint/no-unused-vars": "warn",
 	},
 	settings: {
-		"import/parsers": {
-			[require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
-		},
 		react: {
 			version: 'detect',
+		},
+		"import/parsers": {
+			[require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
 		},
 	},
 

@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
-    "eslint-config-prettier",
     "plugin:prettier/recommended",
     "airbnb",
     "prettier",
@@ -15,8 +14,8 @@ module.exports = {
   plugins: ["@typescript-eslint"],
 
   parser: "@typescript-eslint/parser",
+
   parserOptions: {
-    extraFileExtensions: [".ts", ".tsx", ".d.ts"],
     ecmaVersion: "latest",
     sourceType: "module",
   },
