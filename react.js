@@ -4,8 +4,8 @@ module.exports = {
 		"eslint-config-prettier",
 		"plugin:react-hooks/recommended",
 		"plugin:prettier/recommended",
+		"plugin:react/recommended",
 		"airbnb",
-		"prettier",
 	],
 
 	env: {
@@ -13,7 +13,7 @@ module.exports = {
 		es2021: true,
 	},
 
-	plugins: ['react', '@typescript-eslint', 'jsx-a11y', 'prettier'],
+	plugins: ['react', '@typescript-eslint', 'jsx-a11y'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: {

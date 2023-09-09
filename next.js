@@ -1,18 +1,15 @@
 module.exports = {
 	extends: [
 		"plugin:@typescript-eslint/recommended",
-		"eslint-config-prettier",
-		"plugin:react-hooks/recommended",
 		"plugin:prettier/recommended",
 		"airbnb",
-		"prettier",
 		"next/core-web-vitals",
 	],
 	env: {
 		es2021: true,
 		node: true,
 	},
-	plugins: ['react', '@typescript-eslint', 'jsx-a11y', 'prettier'],
+	plugins: ['@typescript-eslint', 'jsx-a11y'],
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		ecmaFeatures: {
