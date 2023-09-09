@@ -1,11 +1,9 @@
 module.exports = {
 	extends: [
 		"plugin:@typescript-eslint/recommended",
-		"eslint:recommended",
 		"eslint-config-prettier",
 		"plugin:react-hooks/recommended",
 		"plugin:prettier/recommended",
-		"plugin:react/jsx-runtime",
 		"airbnb",
 		"prettier",
 		"next/core-web-vitals",

@@ -1,7 +1,6 @@
 module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
-    "eslint:recommended",
     "eslint-config-prettier",
     "plugin:prettier/recommended",
     "airbnb",
@@ -11,7 +10,7 @@ module.exports = {
   env: {
     es2021: true,
   },
-  plugins: ["@typescript-eslint", "jsx-a11y", "prettier"],
+  plugins: ["@typescript-eslint", "prettier"],
 
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -21,6 +20,13 @@ module.exports = {
   },
 
   rules: {
+    "no-undef": "off",
+    "import/no-extraneous-dependencies": "off",
+    "max-classes-per-file": "off",
+    "no-underscore-dangle": "off",
+    "no-new": "off",
+    "no-plusplus": "off",
+    "no-await-in-loop": "off",
     "class-methods-use-this":"off",
     "import/extensions": "off",
     "import/no-unresolved":"off",
@@ -30,6 +36,8 @@ module.exports = {
     "camelcase":"off",
     "no-async-promise-executor": "off",
     "no-debugger": "warn",
+    "no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
     "prettier/prettier": [
       "error",
       {
@@ -67,8 +75,7 @@ module.exports = {
         props: false,
       },
     ],
-    "no-unused-vars": "warn",
-    "@typescript-eslint/no-unused-vars": "warn",
+    
   },
   settings: {
     "import/parsers": {
