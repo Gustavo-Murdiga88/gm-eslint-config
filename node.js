@@ -11,8 +11,8 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  
-  plugins: ["@typescript-eslint", "prettier"],
+
+  plugins: ["@typescript-eslint"],
 
   parser: "@typescript-eslint/parser",
   parserOptions: {

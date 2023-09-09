@@ -4,6 +4,7 @@ module.exports = {
 		"plugin:prettier/recommended",
 		"airbnb",
 		"next/core-web-vitals",
+		"prettier",
 	],
 	env: {
 		es2021: true,

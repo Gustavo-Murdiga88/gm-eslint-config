@@ -6,6 +6,7 @@ module.exports = {
 		"plugin:prettier/recommended",
 		"plugin:react/recommended",
 		"airbnb",
+		"prettier",
 	],
 
 	env: {
