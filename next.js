@@ -23,6 +23,14 @@ module.exports = {
 	},
 
 	rules: {
+		camelcase: "off",
+		"import/first": "off",
+		"no-shadow": "off",
+		"react/jsx-no-bind": "off",
+		"@typescript-eslint/ban-ts-comment": "off",
+		"@typescript-eslint/no-var-requires": "off",
+		"global-require": "off",
+		"prefer-const": "off",
 		"no-restricted-exports": "off",
     "import/no-unresolved": "off",
 		"import/extensions": "off",
