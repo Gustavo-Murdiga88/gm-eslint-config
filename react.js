@@ -28,6 +28,14 @@ module.exports = {
 
 	rules: {
 		camelcase: "off",
+		"no-useless-constructor": "off",
+		"max-classes-per-file": "off",
+		"class-methods-use-this": "off",
+		"no-plusplus": "off",
+		"import/no-extraneous-dependencies": "off",
+		"tailwindcss/no-custom-classname": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"react/style-prop-object": "off",
 		"import/first": "off",
 		"no-shadow": "off",
 		"react/jsx-no-bind": "off",

@@ -21,6 +21,12 @@ module.exports = {
   },
 
   rules: {
+    "no-useless-constructor": "off",
+		"max-classes-per-file": "off",
+		"class-methods-use-this": "off",
+		"no-plusplus": "off",
+		"import/no-extraneous-dependencies": "off",
+		"@typescript-eslint/no-explicit-any": "off",
     "no-undef": "off",
     "import/no-extraneous-dependencies": "off",
     "max-classes-per-file": "off",
