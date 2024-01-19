@@ -23,6 +23,8 @@ module.exports = {
 	},
 
 	rules: {
+		"simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
 		"no-useless-constructor": "off",
 		"max-classes-per-file": "off",
 		"class-methods-use-this": "off",

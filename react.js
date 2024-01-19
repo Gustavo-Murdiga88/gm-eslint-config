@@ -27,6 +27,8 @@ module.exports = {
 	},
 
 	rules: {
+		"simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
 		camelcase: "off",
 		"no-useless-constructor": "off",
 		"max-classes-per-file": "off",
