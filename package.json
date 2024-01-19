@@ -1,7 +1,7 @@
 {
   "name": "@gm-dev/eslint-config",
   "private": false,
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "an project with my config of the eslint in projects nextJs, vite and more",
   "main": "index.js",
   "publishConfig": {

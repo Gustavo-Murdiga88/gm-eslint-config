@@ -15,7 +15,7 @@ This package was built for help when you need config eslint on your project. Thi
 "extends": ["@gm-dev/eslint-config/next"],
 ```
 
-# Indicate
+<!-- # Indicate
 <p>
 I indicate a config  for more patterns in the config eslint.
 
@@ -50,4 +50,4 @@ eslint-plugin-import-helpers
 ```json
    "plugins": ["eslint-plugin-import-helpers"]
 
-```
+``` -->
