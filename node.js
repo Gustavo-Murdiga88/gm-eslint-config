@@ -11,7 +11,7 @@ module.exports = {
     node: true,
   },
 
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint","simple-import-sort"],
 
   parser: "@typescript-eslint/parser",
 

@@ -10,16 +10,16 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	plugins: ['@typescript-eslint', 'jsx-a11y'],
-	parser: '@typescript-eslint/parser',
+	plugins: ["@typescript-eslint", "jsx-a11y","simple-import-sort"],
+	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true,
 		},
 
-		extraFileExtensions: ['.ts', '.tsx', '.d.ts'],
-		ecmaVersion: 'latest',
-		sourceType: 'module',
+		extraFileExtensions: [".ts", ".tsx", ".d.ts"],
+		ecmaVersion: "latest",
+		sourceType: "module",
 	},
 
 	rules: {
@@ -47,17 +47,17 @@ module.exports = {
 		"react/jsx-filename-extension": "off",
 		"react/jsx-runtime": "off",
 		"react/react-in-jsx-scope": "off",
-    "import/prefer-default-export": 'off',
+    "import/prefer-default-export": "off",
 		"no-async-promise-executor": "off",
 		"no-debugger": "warn",
 		"prettier/prettier": [
 			"error",
 			{
 				printWidth: 80,
-				allowParens: 'always',
+				allowParens: "always",
 				bracketSameLine: false,
-				trailingComma: 'all',
-				endOfLine: 'auto',
+				trailingComma: "all",
+				endOfLine: "auto",
 				useTabs: true,
 				"tabWidth": 2,
 				bracketSpacing: true,
@@ -68,16 +68,16 @@ module.exports = {
 		"@typescript-eslint/naming-convention": [
 			"error",
 			{
-				selector: 'interface',
-				format: ['PascalCase'],
+				selector: "interface",
+				format: ["PascalCase"],
 				custom: {
-					regex: '^I[A-Z]',
+					regex: "^I[A-Z]",
 					match: true,
 				},
 			},
 			{
-				selector: 'typeLike',
-				format: ['PascalCase'],
+				selector: "typeLike",
+				format: ["PascalCase"],
 			},
 		],
 
@@ -93,11 +93,11 @@ module.exports = {
 	
 	settings: {
 		"import/parsers": {
-			[require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts'],
+			[require.resolve("@typescript-eslint/parser")]: [".ts", ".tsx", ".d.ts"],
 		},
 
 		react: {
-			version: 'detect',
+			version: "detect",
 		},
 	},
 };
