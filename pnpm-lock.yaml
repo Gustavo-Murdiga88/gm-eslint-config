@@ -53,9 +53,6 @@ importers:
       prettier:
         specifier: ^3.3.1
         version: 3.3.1
-      recommended:
-        specifier: link:plugin:tailwindcss/recommended
-        version: link:plugin:tailwindcss/recommended
       typescript:
         specifier: '>=4'
         version: 5.4.5
