@@ -3,9 +3,15 @@
   "private": false,
   "author": "Gustavo Murdiga",
   "license": "MIT",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "an project with my config of the eslint in projects nextJs, vite and more",
   "main": "index.js",
+  "exports": {
+    "./next": "./next.js",
+    "./node": "./node.js",
+    "./react": "./react.js",
+    "./tailwind/next": "./tailwind/next.js"
+  },
   "publishConfig": {
     "access": "public"
   },
