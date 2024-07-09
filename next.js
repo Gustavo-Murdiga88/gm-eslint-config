@@ -1,6 +1,5 @@
 module.exports = {
 	extends: [
-		"plugin:@typescript-eslint/recommended",
 		"plugin:prettier/recommended",
 		"airbnb",
 		"next/core-web-vitals",
@@ -10,7 +9,7 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	plugins: ["@typescript-eslint", "jsx-a11y","simple-import-sort"],
+	plugins: ["@typescript-eslint", "jsx-a11y", "simple-import-sort"],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		ecmaFeatures: {
@@ -24,7 +23,7 @@ module.exports = {
 
 	rules: {
 		"simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
+		"simple-import-sort/exports": "error",
 		"no-useless-constructor": "off",
 		"max-classes-per-file": "off",
 		"class-methods-use-this": "off",
@@ -41,7 +40,7 @@ module.exports = {
 		"global-require": "off",
 		"prefer-const": "off",
 		"no-restricted-exports": "off",
-    "import/no-unresolved": "off",
+		"import/no-unresolved": "off",
 		"import/extensions": "off",
 		camelcase: "off",
 		"react/jsx-props-no-spreading": "off",
@@ -49,7 +48,7 @@ module.exports = {
 		"react/jsx-filename-extension": "off",
 		"react/jsx-runtime": "off",
 		"react/react-in-jsx-scope": "off",
-    "import/prefer-default-export": "off",
+		"import/prefer-default-export": "off",
 		"no-async-promise-executor": "off",
 		"no-debugger": "warn",
 		"prettier/prettier": [
@@ -92,7 +91,7 @@ module.exports = {
 		"no-unused-vars": "warn",
 		"@typescript-eslint/no-unused-vars": "warn",
 	},
-	
+
 	settings: {
 		"import/parsers": {
 			[require.resolve("@typescript-eslint/parser")]: [".ts", ".tsx", ".d.ts"],

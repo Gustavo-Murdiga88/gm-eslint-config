@@ -3,7 +3,7 @@
   "private": false,
   "author": "Gustavo Murdiga",
   "license": "MIT",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "an project with my config of the eslint in projects nextJs, vite and more",
   "main": "index.js",
   "exports": {
@@ -39,8 +39,8 @@
     "eslint-config"
   ],
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",

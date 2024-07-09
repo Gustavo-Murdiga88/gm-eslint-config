@@ -1,6 +1,5 @@
 module.exports = {
 	extends: [
-		"plugin:@typescript-eslint/recommended",
 		"plugin:prettier/recommended",
 		"airbnb",
 		"next/core-web-vitals",
