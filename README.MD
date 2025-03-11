@@ -11,8 +11,14 @@ This package was built for help when you need config eslint on your project. Thi
 ```
 # Usage example
 
-```json
-"extends": ["@gm-dev/eslint-config/next"],
+```js
+// eslint.config.mjs
+
+import gm from "@gm-dev/eslint-config/node";
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [...gm];
+
 ```
 
 <!-- # Indicate

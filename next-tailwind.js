@@ -6,6 +6,7 @@ import pluginReact from "eslint-plugin-react";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import globals from "globals";
 import tseslint from "typescript-eslint";
+import tailwind from "eslint-plugin-tailwindcss";
 
 export default [
 	{ files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
@@ -14,6 +15,7 @@ export default [
 	prettier,
 	pluginJs.configs.recommended,
 	eslint.configs.recommended,
+	...tailwind.configs["flat/recommended"],
 	...tseslint.configs.recommended,
 	...tseslint.config({
 		rules: {

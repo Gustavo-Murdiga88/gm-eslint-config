@@ -1,94 +1,69 @@
-module.exports = {
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "airbnb",
-    "prettier",
-  ],
+import pluginJs from "@eslint/js";
+import eslint from "@eslint/js";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import prettier from "eslint-plugin-prettier/recommended";
+import pluginReact from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
-  env: {
-    es2021: true,
-    node: true,
+export default [
+  {
+    files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    ignorePatterns: ["node_modules/**"],
   },
-
-  plugins: ["@typescript-eslint","simple-import-sort"],
-
-  parser: "@typescript-eslint/parser",
-
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-
-  rules: {
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "no-useless-constructor": "off",
-		"max-classes-per-file": "off",
-		"class-methods-use-this": "off",
-		"no-plusplus": "off",
-		"import/no-extraneous-dependencies": "off",
-		"@typescript-eslint/no-explicit-any": "off",
-    "no-undef": "off",
-    "import/no-extraneous-dependencies": "off",
-    "max-classes-per-file": "off",
-    "no-underscore-dangle": "off",
-    "no-new": "off",
-    "no-plusplus": "off",
-    "no-await-in-loop": "off",
-    "class-methods-use-this":"off",
-    "import/extensions": "off",
-    "import/no-unresolved":"off",
-    "import/prefer-default-export": "off",
-    "no-useless-constructor": "off",
-    "no-empty-function": "off",
-    "camelcase":"off",
-    "no-async-promise-executor": "off",
-    "no-debugger": "warn",
-    "no-unused-vars": "warn",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "prettier/prettier": [
-      "error",
-      {
-        printWidth: 80,
-        allowParens: "always",
-        bracketSameLine: false,
-        trailingComma: "all",
-        endOfLine: "auto",
-        useTabs: true,
-        tabWidth: 2,
-        bracketSpacing: true,
-        singleQuote: false,
-        jsxSingleQuote: false,
-      },
-    ],
-    "@typescript-eslint/naming-convention": [
-      "error",
-      {
-        selector: "interface",
-        format: ["PascalCase"],
-        custom: {
-          regex: "^I[A-Z]",
-          match: true,
+  { languageOptions: { globals: globals.browser } },
+  pluginReact.configs.flat.recommended,
+  prettier,
+  pluginJs.configs.recommended,
+  eslint.configs.recommended,
+  ...tseslint.configs.recommended,
+  ...tseslint.config({
+    rules: {
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          selector: "interface",
+          format: ["PascalCase"],
+          custom: {
+            regex: "^I[A-Z]",
+            match: true,
+          },
         },
-      },
-      {
-        selector: "typeLike",
-        format: ["PascalCase"],
-      },
-    ],
-
-    "no-param-reassign": [
-      "warn",
-      {
-        props: false,
-      },
-    ],
-    
-  },
-  settings: {
-    "import/parsers": {
-      [require.resolve("@typescript-eslint/parser")]: [".ts", ".tsx", ".d.ts"],
+        {
+          selector: "typeLike",
+          format: ["PascalCase"],
+        },
+      ],
+    },
+  }),
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+    rules: {
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
     },
   },
-};
+  {
+    plugins: {
+      "jsx-a11y": jsxA11y,
+      "react-hooks": reactHooks,
+    },
+    languageOptions: {
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    rules: {
+      "jsx-a11y/alt-text": "error",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "react/react-in-jsx-scope": "off",
+    },
+  },
+];
