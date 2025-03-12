@@ -3,7 +3,8 @@
   "private": false,
   "author": "Gustavo Murdiga",
   "license": "MIT",
-  "version": "2.0.0",
+  "version": "2.0.1",
+  "type": "module",
   "description": "an project with my config of the eslint in projects nextJs, vite and more",
   "main": "index.js",
   "exports": {
