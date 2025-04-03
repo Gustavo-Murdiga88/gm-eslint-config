@@ -18,11 +18,11 @@ import gm from "@gm-dev/eslint-config/node";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
-  {
-		files: ["*.ts", "*.tsx"],
-		ignores: [], 
-	},
-  ...gm
+      {
+		files: ["./src/**/*.ts"],
+		ignores: ["node_modules"], 
+	  },
+      ...gm
 ];
 
 ```
