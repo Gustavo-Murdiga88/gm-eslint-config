@@ -4,12 +4,13 @@ import jsxA11y from "eslint-plugin-jsx-a11y";
 import prettier from "eslint-plugin-prettier/recommended";
 import pluginReact from "eslint-plugin-react";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
+import reactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import tailwind from "eslint-plugin-tailwindcss";
 
+/**@type {import("eslint").Linter.Config} */
 export default [
-	{ files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"] },
 	{ languageOptions: { globals: globals.browser } },
 	pluginReact.configs.flat.recommended,
 	prettier,
@@ -48,6 +49,7 @@ export default [
 	{
 		plugins: {
 			"jsx-a11y": jsxA11y,
+			"react-hooks": reactHooks,
 		},
 		languageOptions: {
 			parserOptions: {
@@ -60,9 +62,12 @@ export default [
 			"jsx-a11y/alt-text": "error",
 		},
 	},
-
 	{
 		rules: {
+			"react/react-in-jsx-scope": "off",
+			"jsx-a11y/alt-text": "error",
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
 			"react/react-in-jsx-scope": "off",
 		},
 	},

@@ -17,7 +17,13 @@ This package was built for help when you need config eslint on your project. Thi
 import gm from "@gm-dev/eslint-config/node";
 
 /** @type {import('eslint').Linter.Config[]} */
-export default [...gm];
+export default [
+  {
+		files: ["*.ts", "*.tsx"],
+		ignores: [], 
+	},
+  ...gm
+];
 
 ```
 

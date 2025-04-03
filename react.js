@@ -1,111 +1,73 @@
-module.exports = {
-	extends: [
-		"plugin:@typescript-eslint/recommended",
-		"eslint-config-prettier",
-		"plugin:react-hooks/recommended",
-		"plugin:prettier/recommended",
-		"plugin:react/recommended",
-		"airbnb",
-		"prettier",
-	],
+import pluginJs from "@eslint/js";
+import eslint from "@eslint/js";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import prettier from "eslint-plugin-prettier/recommended";
+import pluginReact from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
-	env: {
-		browser: true,
-		es2021: true,
-	},
-
-	plugins: ["react", "@typescript-eslint", "jsx-a11y","simple-import-sort"],
-	parser: "@typescript-eslint/parser",
-	parserOptions: {
-		ecmaFeatures: {
-			jsx: true,
+/**@type {import("eslint").Linter.Config} */
+export default [
+	{ languageOptions: { globals: globals.browser } },
+	pluginReact.configs.flat.recommended,
+	prettier,
+	pluginJs.configs.recommended,
+	eslint.configs.recommended,
+	...tseslint.configs.recommended,
+	...tseslint.config({
+		rules: {
+			"@typescript-eslint/naming-convention": [
+				"error",
+				{
+					selector: "interface",
+					format: ["PascalCase"],
+					custom: {
+						regex: "^I[A-Z]",
+						match: true,
+					},
+				},
+				{
+					selector: "typeLike",
+					format: ["PascalCase"],
+				},
+			],
 		},
-
-		extraFileExtensions: [".ts", ".tsx", ".d.ts"],
-		ecmaVersion: "latest",
-		sourceType: "module",
+	}),
+	{
+		plugins: {
+			"simple-import-sort": simpleImportSort,
+		},
+		rules: {
+			"simple-import-sort/imports": "error",
+			"simple-import-sort/exports": "error",
+		},
 	},
+	{
+		plugins: {
+			"jsx-a11y": jsxA11y,
+			"react-hooks": reactHooks,
 
-	rules: {
-		"simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-		camelcase: "off",
-		"no-useless-constructor": "off",
-		"max-classes-per-file": "off",
-		"class-methods-use-this": "off",
-		"no-plusplus": "off",
-		"import/no-extraneous-dependencies": "off",
-		"tailwindcss/no-custom-classname": "off",
-		"@typescript-eslint/no-explicit-any": "off",
-		"react/style-prop-object": "off",
-		"import/first": "off",
-		"no-shadow": "off",
-		"react/jsx-no-bind": "off",
-		"@typescript-eslint/ban-ts-comment": "off",
-		"@typescript-eslint/no-var-requires": "off",
-		"global-require": "off",
-		"prefer-const": "off",
-		"no-restricted-exports": "off",
-    "import/no-unresolved": "off",
-		"import/extensions": "off",
-		"react/jsx-props-no-spreading": "off",
-		"react/require-default-props": "off",
-		"react/jsx-filename-extension": "off",
-		"react/jsx-runtime": "off",
-		"react/react-in-jsx-scope": "off",
-    "import/prefer-default-export": "off",
-		"no-async-promise-executor": "off",
-		"no-debugger": "warn",
-
-		"prettier/prettier": [
-			"error",
-			{
-				printWidth: 80,
-				allowParens: "always",
-				bracketSameLine: false,
-				trailingComma: "all",
-				endOfLine: "auto",
-				useTabs: true,
-				"tabWidth": 2,
-				bracketSpacing: true,
-				singleQuote: false,
-				jsxSingleQuote: false,
-			},
-		],
-		"@typescript-eslint/naming-convention": [
-			"error",
-			{
-				selector: "interface",
-				format: ["PascalCase"],
-				custom: {
-					regex: "^I[A-Z]",
-					match: true,
+		},
+		languageOptions: {
+			parserOptions: {
+				ecmaFeatures: {
+					jsx: true,
 				},
 			},
-			{
-				selector: "typeLike",
-				format: ["PascalCase"],
-			},
-		],
-		"no-param-reassign": [
-			"warn",
-			{
-				props: false,
-			},
-		],
-		"no-unused-vars": "warn",
-		"@typescript-eslint/no-unused-vars": "warn",
-	},
-	settings: {
-		react: {
-			version: "detect",
 		},
-		"import/parsers": {
-			[require.resolve("@typescript-eslint/parser")]: [".ts", ".tsx", ".d.ts"],
+		rules: {
+			"jsx-a11y/alt-text": "error",
 		},
 	},
-
-	ignorePatterns: [
-    "node_modules"
-  ]
-};
+	{
+		rules: {
+			"react/react-in-jsx-scope": "off",
+			"jsx-a11y/alt-text": "error",
+			"react-hooks/rules-of-hooks": "error",
+			"react-hooks/exhaustive-deps": "warn",
+			"react/react-in-jsx-scope": "off",
+		},
+	},
+];
