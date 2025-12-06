@@ -1,8 +1,6 @@
 import pluginJs from "@eslint/js";
 import eslint from "@eslint/js";
-import jsxA11y from "eslint-plugin-jsx-a11y";
 import prettier from "eslint-plugin-prettier/recommended";
-import pluginReact from "eslint-plugin-react";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -10,7 +8,6 @@ import tseslint from "typescript-eslint";
 /**@type {import("eslint").Linter.Config} */
 export default [
   { languageOptions: { globals: globals.browser } },
-  pluginReact.configs.flat.recommended,
   prettier,
   pluginJs.configs.recommended,
   eslint.configs.recommended,
@@ -44,10 +41,6 @@ export default [
     },
   },
   {
-    plugins: {
-      "jsx-a11y": jsxA11y,
-      "react-hooks": reactHooks,
-    },
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
