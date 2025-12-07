@@ -16,7 +16,7 @@ export default [
 	pluginJs.configs.recommended,
 	eslint.configs.recommended,
 	...tseslint.configs.recommended,
-	...tseslint.configs.recommended({
+	{
 		rules: {
 			"@typescript-eslint/naming-convention": [
 				"error",
@@ -34,7 +34,7 @@ export default [
 				},
 			],
 		},
-	}),
+	},
 	{
 		plugins: {
 			"simple-import-sort": simpleImportSort,

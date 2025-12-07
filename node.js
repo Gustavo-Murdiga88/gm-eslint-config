@@ -7,12 +7,12 @@ import tseslint from "typescript-eslint";
 
 /**@type {import("eslint").Linter.Config} */
 export default [
-  { languageOptions: { globals: globals.browser } },
+   { languageOptions: { globals: globals.node } },
   prettier,
   pluginJs.configs.recommended,
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
-  ...tseslint.configs.recommended({
+  {
     rules: {
       "@typescript-eslint/naming-convention": [
         "error",
@@ -30,7 +30,7 @@ export default [
         },
       ],
     },
-  }),
+  },
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
@@ -39,14 +39,5 @@ export default [
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
     },
-  },
-  {
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
-    },
-  },
+  }
 ];
