@@ -16,7 +16,7 @@ export default [
 	pluginJs.configs.recommended,
 	eslint.configs.recommended,
 	...tseslint.configs.recommended,
-	...tseslint.config({
+	...tseslint.configs.recommended({
 		rules: {
 			"@typescript-eslint/naming-convention": [
 				"error",

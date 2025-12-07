@@ -18,7 +18,7 @@ export default [
 	eslint.configs.recommended,
 	...tailwind.configs["flat/recommended"],
 	...tseslint.configs.recommended,
-	...tseslint.config({
+	...tseslint.configs.recommended({
 		rules: {
 			"@typescript-eslint/naming-convention": [
 				"error",
